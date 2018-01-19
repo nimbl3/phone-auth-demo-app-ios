@@ -10,7 +10,7 @@ import UIKit
 
 enum FontWeight: String {
     
-    case regular, semiBold, medium, bold
+    case regular, demiBold, medium, bold
     
 }
 

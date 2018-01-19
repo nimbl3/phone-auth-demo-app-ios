@@ -9,29 +9,29 @@
 import UIKit
 import AccountKit
 import SnapKit
+import ReactiveSwift
+import ReactiveCocoa
+
+enum AuthorizationStatus {
+    case authorized(token: String)
+    case unauthorized
+}
 
 class ViewController: UIViewController, AKFViewControllerDelegate {
 
     private let accountKit = AKFAccountKit(responseType: .accessToken)
     
     private let stackView = UIStackView()
+    private let statusLabel = UILabel()
     private let loginButton = UIButton()
+    
+    private let status = MutableProperty<AuthorizationStatus>(.unauthorized)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
         setupAccountKit()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if let token = accountKit.currentAccessToken {
-            displayAlert(title: "Token exists!",
-                         message: "Should navigate to the main screen. \(token.tokenString)")
-        } else {
-            //todo:- show login
-        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
@@ -44,22 +44,90 @@ class ViewController: UIViewController, AKFViewControllerDelegate {
         
         stackView.snp.makeConstraints { $0.center.equalToSuperview() }
         
-        stackView.addArrangedSubview(loginButton)
+        stackView.addArrangedSubview(statusLabel)
         
-        loginButton.setTitle("Login via Phone number", for: .normal)
-        loginButton.backgroundColor = .peterRiver
-        loginButton.titleLabel?.font = .avenirNext(.medium, size: 16.0)
+        stackView.addArrangedSubview(loginButton)
         loginButton.snp.makeConstraints {
             $0.width.equalTo(view).multipliedBy(0.6)
             $0.height.equalTo(50.0)
         }
+        
+        stackView.axis = .vertical
+        stackView.spacing = 40.0
+        stackView.distribution = .fill
+        
+        statusLabel.textColor = .white
+        statusLabel.font = .avenirNext(.medium, size: 16.0)
+        statusLabel.numberOfLines = 10
+        statusLabel.reactive.text <~ status.map {
+            switch $0 {
+            case .authorized(let token):    return "Logged in with token: \(token)"
+            case .unauthorized:             return "Seems like you haven't logged in yet."
+            }
+        }
+        
+        loginButton.setTitle("Login via Phone number", for: .normal)
+        loginButton.layer.cornerRadius = 6.0
+        loginButton.backgroundColor = .peterRiver
+        loginButton.titleLabel?.font = .avenirNext(.demiBold, size: 16.0)
+        loginButton.reactive.controlEvents(.touchUpInside)
+            .take(during: reactive.lifetime)
+            .observeValues { [unowned self] _ in
+                UIView.animate(withDuration: 0.3) {
+                switch self.status.value {
+                case .authorized:           self.logout()
+                case .unauthorized:         self.presentLogin()
+                }
+        }
+        
+        loginButton.reactive.title <~ status.map {
+            switch $0 {
+            case .authorized:               return "Logout"
+            case .unauthorized:             return "Login via Phone number"
+            }
+        }
+        
+        loginButton.reactive.backgroundColor <~ status.map {
+            switch $0 {
+            case .authorized:               return UIColor.alizarin
+            case .unauthorized:             return UIColor.peterRiver
+            }
+        }
+        
     }
 
     private func setupAccountKit() {
         
     }
     
-    //MARK:- account kit delegate
+    //MARK:- account kit handling
+    
+    func viewController(_ viewController: (UIViewController & AKFViewController)!, didCompleteLoginWith accessToken: AKFAccessToken!, state: String!) {
+        status.value = .authorized(token: accessToken.tokenString)
+    }
+    
+    private func presentLogin() {
+        let viewController = accountKit.viewControllerForPhoneLogin()
+        viewController.enableSendToFacebook = true
+        viewController.enableGetACall = true
+        
+        viewController.navigationItem.hidesBackButton = true
+        
+        viewController.delegate = self
+        present(viewController, animated: true, completion: nil)
+    }
+        
+    private func logout() {
+        accountKit.logOut { [unowned self] (_, error) in
+            if let error = error {
+                self.displayAlert(title: "Sorry!", message: error.localizedDescription)
+                return
+            }
+            UIView.animate(withDuration: 0.3) {
+                self.status.value = .unauthorized
+            }
+        }
+    }
     
 }
 

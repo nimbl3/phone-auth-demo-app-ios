@@ -21,5 +21,6 @@ extension UIColor {
     static let midnightBlue = UIColor(44, 62, 80)
     
     static let peterRiver = UIColor(52, 152, 219)
+    static let alizarin = UIColor(231, 76, 60)
     
 }
