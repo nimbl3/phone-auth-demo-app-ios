@@ -7,6 +7,7 @@ target 'Phone auth demo' do
 
   # Pods for Phone auth demo
   pod 'AccountKit'
-  
+  pod 'SnapKit'
+  pod 'ReactiveCocoa'
 
 end
