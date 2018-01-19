@@ -6,5 +6,7 @@ target 'Phone auth demo' do
   use_frameworks!
 
   # Pods for Phone auth demo
+  pod 'AccountKit'
+  
 
 end

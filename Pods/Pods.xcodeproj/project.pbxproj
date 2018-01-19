@@ -15,17 +15,39 @@
 /* Begin PBXFileReference section */
 		028E4CCF4FF89AEC54826E77BB2D8CAB /* Pods-Phone auth demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Phone auth demo.modulemap"; sourceTree = "<group>"; };
 		08E34CCA01FB076CC218BECF4DD8B51E /* Pods-Phone auth demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Phone auth demo-acknowledgements.plist"; sourceTree = "<group>"; };
+		0E776BCE8103E62E20FEB355A27A05F3 /* AKFUIManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFUIManager.h; path = AccountKit.framework/Headers/AKFUIManager.h; sourceTree = "<group>"; };
+		10101C92DD554AB4C8B1E8D1DB6B4972 /* AKFSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFSettings.h; path = AccountKit.framework/Headers/AKFSettings.h; sourceTree = "<group>"; };
+		119DF1ADBB8261B74068D8D82BDC8A3F /* AKFResponseType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFResponseType.h; path = AccountKit.framework/Headers/AKFResponseType.h; sourceTree = "<group>"; };
 		1BA7C9ACC57BE86E4DE441391C3C8FA4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C137D9FB123CFEF9DA1128B4F7ACD96 /* AccountKitStrings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = AccountKitStrings.bundle; sourceTree = "<group>"; };
+		259729DB69BB86EC24DD774E4B72801C /* AKFAccountKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFAccountKit.h; path = AccountKit.framework/Headers/AKFAccountKit.h; sourceTree = "<group>"; };
 		26B957775376A38F846242785A0D44BB /* Pods-Phone auth demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Phone auth demo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2A9A1CF420BFCCFF6069BF51C9158043 /* AKFViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFViewController.h; path = AccountKit.framework/Headers/AKFViewController.h; sourceTree = "<group>"; };
 		2AA1F1518D0E367135E6861FCB140BBE /* Pods-Phone auth demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Phone auth demo.debug.xcconfig"; sourceTree = "<group>"; };
+		4B5583B084519251B4FB0FA3309F1F00 /* AKFConfiguring.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFConfiguring.h; path = AccountKit.framework/Headers/AKFConfiguring.h; sourceTree = "<group>"; };
 		509D31F58E6ADC7F4A79FC12EED77DF2 /* Pods-Phone auth demo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Phone auth demo-resources.sh"; sourceTree = "<group>"; };
+		5130162B8BBF9A47BD5F6AEEDA8C6CA4 /* AccountKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AccountKit.h; path = AccountKit.framework/Headers/AccountKit.h; sourceTree = "<group>"; };
+		523E30DCB18CE31E432BF954BE6ABA70 /* AKFAccount.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFAccount.h; path = AccountKit.framework/Headers/AKFAccount.h; sourceTree = "<group>"; };
+		597C3E4B04CB9C2D874C15757260FC6C /* AKFAccessToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFAccessToken.h; path = AccountKit.framework/Headers/AKFAccessToken.h; sourceTree = "<group>"; };
+		5AF8ADD00D4E68834D5A5649252965A7 /* AKFErrorDetail.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFErrorDetail.h; path = AccountKit.framework/Headers/AKFErrorDetail.h; sourceTree = "<group>"; };
+		62D42434B6F950E41EE6FF5CCBE0D8FD /* AKFError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFError.h; path = AccountKit.framework/Headers/AKFError.h; sourceTree = "<group>"; };
+		65BF676F286D1C5406ED3C8A9EAB3066 /* AKFLoginFlowState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFLoginFlowState.h; path = AccountKit.framework/Headers/AKFLoginFlowState.h; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6678FC0C40F966C59CB154307E3CD929 /* Pods-Phone auth demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Phone auth demo.release.xcconfig"; sourceTree = "<group>"; };
+		7A74CAE509A94A378625F741C5BB3CCD /* AKFTextPosition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFTextPosition.h; path = AccountKit.framework/Headers/AKFTextPosition.h; sourceTree = "<group>"; };
+		7D842F447823820043CB4F634392A688 /* AKFButtonType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFButtonType.h; path = AccountKit.framework/Headers/AKFButtonType.h; sourceTree = "<group>"; };
+		80AE20782037B0EF7AF7446A0C825A5D /* AKFTheme.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFTheme.h; path = AccountKit.framework/Headers/AKFTheme.h; sourceTree = "<group>"; };
+		858013366FC92144FF8938368338838D /* AKFAccountPreferences.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFAccountPreferences.h; path = AccountKit.framework/Headers/AKFAccountPreferences.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B516D940FE7477B8964E0683DBC62316 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
+		B7CDEE3EE8097AD853AC16E4F2B43A28 /* AKFSkinManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFSkinManager.h; path = AccountKit.framework/Headers/AKFSkinManager.h; sourceTree = "<group>"; };
 		BE91EC6ED323BC3C71A62F80A6834DB8 /* Pods-Phone auth demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Phone auth demo-umbrella.h"; sourceTree = "<group>"; };
+		BEA64921B9F736F65A6471288A5CED4A /* AKFUIManaging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFUIManaging.h; path = AccountKit.framework/Headers/AKFUIManaging.h; sourceTree = "<group>"; };
 		C622A7C02DE8DD11941366CA8B4415F0 /* Pods_Phone_auth_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Phone_auth_demo.framework; path = "Pods-Phone auth demo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F81C89245E3B59AC7501331F25B60D /* Pods-Phone auth demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Phone auth demo-dummy.m"; sourceTree = "<group>"; };
 		D47C60507500DBBF862CF09B9D9EB527 /* Pods-Phone auth demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Phone auth demo-frameworks.sh"; sourceTree = "<group>"; };
+		F4E59833EB17DA76817241D8B7EAC7B4 /* AKFLoginType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFLoginType.h; path = AccountKit.framework/Headers/AKFLoginType.h; sourceTree = "<group>"; };
+		F929A78FFEEEAC013F32F2D843241D21 /* AKFPhoneNumber.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFPhoneNumber.h; path = AccountKit.framework/Headers/AKFPhoneNumber.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +70,44 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		0712407882D695AE4BE46A73B5CBD34C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B516D940FE7477B8964E0683DBC62316 /* AccountKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B0018202BBCD94DB8CED05D189B5F1B /* AccountKit */ = {
+			isa = PBXGroup;
+			children = (
+				5130162B8BBF9A47BD5F6AEEDA8C6CA4 /* AccountKit.h */,
+				597C3E4B04CB9C2D874C15757260FC6C /* AKFAccessToken.h */,
+				523E30DCB18CE31E432BF954BE6ABA70 /* AKFAccount.h */,
+				259729DB69BB86EC24DD774E4B72801C /* AKFAccountKit.h */,
+				858013366FC92144FF8938368338838D /* AKFAccountPreferences.h */,
+				7D842F447823820043CB4F634392A688 /* AKFButtonType.h */,
+				4B5583B084519251B4FB0FA3309F1F00 /* AKFConfiguring.h */,
+				62D42434B6F950E41EE6FF5CCBE0D8FD /* AKFError.h */,
+				5AF8ADD00D4E68834D5A5649252965A7 /* AKFErrorDetail.h */,
+				65BF676F286D1C5406ED3C8A9EAB3066 /* AKFLoginFlowState.h */,
+				F4E59833EB17DA76817241D8B7EAC7B4 /* AKFLoginType.h */,
+				F929A78FFEEEAC013F32F2D843241D21 /* AKFPhoneNumber.h */,
+				119DF1ADBB8261B74068D8D82BDC8A3F /* AKFResponseType.h */,
+				10101C92DD554AB4C8B1E8D1DB6B4972 /* AKFSettings.h */,
+				B7CDEE3EE8097AD853AC16E4F2B43A28 /* AKFSkinManager.h */,
+				7A74CAE509A94A378625F741C5BB3CCD /* AKFTextPosition.h */,
+				80AE20782037B0EF7AF7446A0C825A5D /* AKFTheme.h */,
+				0E776BCE8103E62E20FEB355A27A05F3 /* AKFUIManager.h */,
+				BEA64921B9F736F65A6471288A5CED4A /* AKFUIManaging.h */,
+				2A9A1CF420BFCCFF6069BF51C9158043 /* AKFViewController.h */,
+				0712407882D695AE4BE46A73B5CBD34C /* Frameworks */,
+				72BF8E5BF5BDA0D97E1C6EE31B7D5223 /* Resources */,
+			);
+			name = AccountKit;
+			path = AccountKit;
+			sourceTree = "<group>";
+		};
 		69038FA01EECF14D4153E6185C508F34 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -56,14 +116,31 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		72BF8E5BF5BDA0D97E1C6EE31B7D5223 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1C137D9FB123CFEF9DA1128B4F7ACD96 /* AccountKitStrings.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				8B00BED618B83EA37B45D8B8335CF40C /* Pods */,
 				69038FA01EECF14D4153E6185C508F34 /* Products */,
 				0646F9FE2FF3392888C1DB2F8C927736 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8B00BED618B83EA37B45D8B8335CF40C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B0018202BBCD94DB8CED05D189B5F1B /* AccountKit */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
