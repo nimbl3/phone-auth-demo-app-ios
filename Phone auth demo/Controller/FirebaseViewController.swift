@@ -14,11 +14,11 @@ import FirebaseAuth
 
 enum OTPStatus {
     case idle
-    case sent
-    case confirmed
+    case sent(verificationId: String)
+    case confirmed(user: User)
 }
 
-class FirebaseViewController: UIViewController, UITextFieldDelegate {
+class FirebaseViewController: UIViewController, UITextFieldDelegate, AuthUIDelegate {
     
     private let stackView = UIStackView()
     private let statusLabel = UILabel()
@@ -74,9 +74,9 @@ class FirebaseViewController: UIViewController, UITextFieldDelegate {
         statusLabel.numberOfLines = 10
         statusLabel.reactive.text <~ status.map {
             switch $0 {
-            case .idle:             return "Please fill in your mobile no. and wait for a SMS to confirm your OTP."
-            case .sent:             return "We have sent you an OTP via SMS. Please check and fill in the code"
-            case .confirmed:        return "You're logged in!"
+            case .idle:                     return "Please fill in your mobile no. and wait for a SMS to confirm your OTP."
+            case .sent(let id):             return "We have sent you an OTP via SMS. Please check and fill in the code (verification id: \(id))"
+            case .confirmed(let user):      return "Welcome \(user.displayName ?? user.uid)! You're logged in!"
             }
         }
         
@@ -93,6 +93,13 @@ class FirebaseViewController: UIViewController, UITextFieldDelegate {
             $0.height.equalTo(50.0)
         }
         
+        textField.reactive.isHidden <~ status.map {
+            switch $0 {
+            case .confirmed:        return true
+            default:                return false
+            }
+        }
+        
         loginButton.layer.cornerRadius = 6.0
         loginButton.titleLabel?.font = .avenirNext(.demiBold, size: 16.0)
         loginButton.reactive.controlEvents(.touchUpInside)
@@ -100,7 +107,7 @@ class FirebaseViewController: UIViewController, UITextFieldDelegate {
             .observeValues { [unowned self] _ in
                 switch self.status.value {
                 case .idle:             self.requestOtp()
-                case .sent:             self.confirmOtp()
+                case .sent(let id):     self.confirmOtp(with: id)
                 case .confirmed:        self.logout()
                 }
         }
@@ -129,16 +136,49 @@ class FirebaseViewController: UIViewController, UITextFieldDelegate {
             .observeValues { [unowned self] _ in self.dismiss(animated: true, completion: nil) }
     }
     
+    //MARK:- network handling
+    
     private func requestOtp() {
-        
+        guard let phoneNumber = textField.text else {
+            displayAlert(title: "Sorry!", message: "Please fill in your mobile number first.")
+            return
+        }
+        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: self) { [weak self] (verificationId, error) in
+            switch (verificationId, error) {
+            case (_, .some(let error)):
+                self?.displayAlert(title: "Sorry!", message: error.localizedDescription)
+            case (.some(let verificationId), _):
+                self?.textField.text = nil
+                self?.status.value = .sent(verificationId: verificationId)
+            default:
+                self?.displayAlert(title: "Sorry!", message: "It seems something went wrong. Please try again")
+            }
+        }
     }
     
-    private func confirmOtp() {
-        
+    private func confirmOtp(with verificationId: String) {
+        guard let code = textField.text, code.count == 6 else {
+            displayAlert(title: "Sorry!", message: "Code must contains 6 numbers. Please try again.")
+            return
+        }
+        let credentials = PhoneAuthProvider.provider().credential(withVerificationID: verificationId, verificationCode: code)
+        Auth.auth().signIn(with: credentials) { [weak self] (user, error) in
+            switch (user, error) {
+            case (_, .some(let error)):         self?.displayAlert(title: "Sorry!", message: error.localizedDescription)
+            case (.some(let user), _):          self?.status.value = .confirmed(user: user)
+            default:                            self?.displayAlert(title: "Sorry!", message: "It seems something went wrong. Please try again")
+            }
+            
+        }
     }
     
     private func logout() {
-        
+        do {
+            try Auth.auth().signOut()
+            status.value = .idle
+        } catch(let error) {
+            displayAlert(title: "Sorry!", message: error.localizedDescription)
+        }
     }
     
 }
