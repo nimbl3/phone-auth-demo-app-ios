@@ -1,0 +1,298 @@
+{
+	"info": {
+		"name": "masgo_user_profile",
+		"_postman_id": "a44a4a8a-87ab-381e-6c67-d3e6602a5b0d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://35.197.142.152:8080/masgo/api/user/profile/get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "6a439cec799e4a028e85419a0f508e2c"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"testhello@masgo.com\",\n\t\"password\" : \"123456\"\n}"
+				},
+				"url": {
+					"raw": "http://35.197.142.152:8080/masgo/api/user/profile/get",
+					"protocol": "http",
+					"host": [
+						"35",
+						"197",
+						"142",
+						"152"
+					],
+					"port": "8080",
+					"path": [
+						"masgo",
+						"api",
+						"user",
+						"profile",
+						"get"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "0863b9b1-fa61-4a3b-bddc-f42667575bde",
+					"name": "http://35.197.142.152:8080/masgo/api/user/profile/get",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-AUTH-TOKEN",
+								"value": "6a439cec799e4a028e85419a0f508e2c",
+								"disabled": false
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"testhello@masgo.com\",\n\t\"password\" : \"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://35.197.142.152:8080/masgo/api/user/profile/get",
+							"protocol": "http",
+							"host": [
+								"35",
+								"197",
+								"142",
+								"152"
+							],
+							"port": "8080",
+							"path": [
+								"masgo",
+								"api",
+								"user",
+								"profile",
+								"get"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 17 Jan 2018 08:33:49 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "0",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"name": "X-Content-Type-Options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY",
+							"name": "X-Frame-Options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block",
+							"name": "X-XSS-Protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [],
+					"responseTime": 125,
+					"body": "{\"id\":-476523135,\"name\":\"test\",\"gender\":\"male\",\"email\":\"test@masgo.com\",\"address\":null,\"password\":\"********\",\"role\":0,\"phone_number\":\"888888888\",\"image_url\":null}"
+				}
+			]
+		},
+		{
+			"name": "35.197.142.152:8080/masgo/api/user/profile/update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "6a439cec799e4a028e85419a0f508e2c"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": -476523135,\n    \"name\": \"Pirush Junhom\",\n    \"email\": \"test@masgo.com\",\n    \"password\": \"123456789\",\n    \"phone_number\" : \"0812345678\"\n}"
+				},
+				"url": {
+					"raw": "35.197.142.152:8080/masgo/api/user/profile/update",
+					"host": [
+						"35",
+						"197",
+						"142",
+						"152"
+					],
+					"port": "8080",
+					"path": [
+						"masgo",
+						"api",
+						"user",
+						"profile",
+						"update"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "23e0f308-f0e4-4bdd-b072-48d6ff908e4e",
+					"name": "35.197.142.152:8080/masgo/api/user/profile/update",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"value": "6a439cec799e4a028e85419a0f508e2c",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": -476523135,\n    \"name\": \"Pirush Junhom\",\n    \"email\": \"test@masgo.com\",\n    \"password\": \"123456789\",\n    \"phone_number\" : \"0812345678\"\n}"
+						},
+						"url": {
+							"raw": "35.197.142.152:8080/masgo/api/user/profile/update",
+							"host": [
+								"35",
+								"197",
+								"142",
+								"152"
+							],
+							"port": "8080",
+							"path": [
+								"masgo",
+								"api",
+								"user",
+								"profile",
+								"update"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 17 Jan 2018 08:47:57 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "0",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"name": "X-Content-Type-Options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY",
+							"name": "X-Frame-Options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block",
+							"name": "X-XSS-Protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [],
+					"responseTime": 304,
+					"body": ""
+				}
+			]
+		}
+	]
+}

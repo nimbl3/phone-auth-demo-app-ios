@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		212D7EC82011BBBA00EFDB91 /* DemoUIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7EC72011BBBA00EFDB91 /* DemoUIManager.swift */; };
 		212D7ECA2011C28D00EFDB91 /* FirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7EC92011C28D00EFDB91 /* FirebaseViewController.swift */; };
+		212D7ECD2011C56A00EFDB91 /* masgo_user_profile.postman_collection.json in Resources */ = {isa = PBXBuildFile; fileRef = 212D7ECC2011C56A00EFDB91 /* masgo_user_profile.postman_collection.json */; };
+		212D7ECF2011C69900EFDB91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 212D7ECE2011C69900EFDB91 /* GoogleService-Info.plist */; };
 		218CCFB720119606008E081E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CCFB620119606008E081E /* AppDelegate.swift */; };
 		218CCFB920119606008E081E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CCFB820119606008E081E /* ViewController.swift */; };
 		218CCFBC20119606008E081E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218CCFBA20119606008E081E /* Main.storyboard */; };
 		218CCFBE20119606008E081E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218CCFBD20119606008E081E /* Assets.xcassets */; };
 		218CCFC120119606008E081E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218CCFBF20119606008E081E /* LaunchScreen.storyboard */; };
-		218CCFC920119E24008E081E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CCFC820119E24008E081E /* LoginViewController.swift */; };
 		218CCFCD20119FC9008E081E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CCFCC20119FC9008E081E /* Colors.swift */; };
 		218CCFCF2011A46E008E081E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CCFCE2011A46E008E081E /* Fonts.swift */; };
 		650BE7901FCE7D959162EC4D /* Pods_Phone_auth_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319002BCB940844681D403EE /* Pods_Phone_auth_demo.framework */; };
@@ -24,6 +25,9 @@
 		1CD977F0D6250D5B73B56AD0 /* Pods-Phone auth demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone auth demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Phone auth demo/Pods-Phone auth demo.debug.xcconfig"; sourceTree = "<group>"; };
 		212D7EC72011BBBA00EFDB91 /* DemoUIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUIManager.swift; sourceTree = "<group>"; };
 		212D7EC92011C28D00EFDB91 /* FirebaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewController.swift; sourceTree = "<group>"; };
+		212D7ECB2011C4A100EFDB91 /* Phone auth demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Phone auth demo.entitlements"; sourceTree = "<group>"; };
+		212D7ECC2011C56A00EFDB91 /* masgo_user_profile.postman_collection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = masgo_user_profile.postman_collection.json; sourceTree = "<group>"; };
+		212D7ECE2011C69900EFDB91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		218CCFB320119606008E081E /* Phone auth demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phone auth demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		218CCFB620119606008E081E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		218CCFB820119606008E081E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +35,6 @@
 		218CCFBD20119606008E081E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		218CCFC020119606008E081E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		218CCFC220119606008E081E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		218CCFC820119E24008E081E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		218CCFCC20119FC9008E081E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		218CCFCE2011A46E008E081E /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		319002BCB940844681D403EE /* Pods_Phone_auth_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phone_auth_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +74,7 @@
 		218CCFB520119606008E081E /* Phone auth demo */ = {
 			isa = PBXGroup;
 			children = (
+				212D7ECB2011C4A100EFDB91 /* Phone auth demo.entitlements */,
 				218CCFCB20119FC1008E081E /* Theme */,
 				218CCFCA20119FBD008E081E /* Controller */,
 				218CCFB620119606008E081E /* AppDelegate.swift */,
@@ -78,6 +82,8 @@
 				218CCFBD20119606008E081E /* Assets.xcassets */,
 				218CCFBF20119606008E081E /* LaunchScreen.storyboard */,
 				218CCFC220119606008E081E /* Info.plist */,
+				212D7ECC2011C56A00EFDB91 /* masgo_user_profile.postman_collection.json */,
+				212D7ECE2011C69900EFDB91 /* GoogleService-Info.plist */,
 				212D7EC72011BBBA00EFDB91 /* DemoUIManager.swift */,
 			);
 			path = "Phone auth demo";
@@ -86,7 +92,6 @@
 		218CCFCA20119FBD008E081E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				218CCFC820119E24008E081E /* LoginViewController.swift */,
 				218CCFB820119606008E081E /* ViewController.swift */,
 				212D7EC92011C28D00EFDB91 /* FirebaseViewController.swift */,
 			);
@@ -155,6 +160,11 @@
 					218CCFB220119605008E081E = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -183,6 +193,8 @@
 			files = (
 				218CCFC120119606008E081E /* LaunchScreen.storyboard in Resources */,
 				218CCFBE20119606008E081E /* Assets.xcassets in Resources */,
+				212D7ECF2011C69900EFDB91 /* GoogleService-Info.plist in Resources */,
+				212D7ECD2011C56A00EFDB91 /* masgo_user_profile.postman_collection.json in Resources */,
 				218CCFBC20119606008E081E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,17 +245,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Phone auth demo/Pods-Phone auth demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -258,7 +276,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				212D7ECA2011C28D00EFDB91 /* FirebaseViewController.swift in Sources */,
-				218CCFC920119E24008E081E /* LoginViewController.swift in Sources */,
 				218CCFCD20119FC9008E081E /* Colors.swift in Sources */,
 				218CCFCF2011A46E008E081E /* Fonts.swift in Sources */,
 				212D7EC82011BBBA00EFDB91 /* DemoUIManager.swift in Sources */,
@@ -401,6 +418,7 @@
 			baseConfigurationReference = 1CD977F0D6250D5B73B56AD0 /* Pods-Phone auth demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Phone auth demo/Phone auth demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4TWS7E2EPE;
 				INFOPLIST_FILE = "Phone auth demo/Info.plist";
@@ -417,6 +435,7 @@
 			baseConfigurationReference = 43D45BE3EDDC9535BBD8251A /* Pods-Phone auth demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Phone auth demo/Phone auth demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4TWS7E2EPE;
 				INFOPLIST_FILE = "Phone auth demo/Info.plist";

@@ -9,5 +9,7 @@ target 'Phone auth demo' do
   pod 'AccountKit'
   pod 'SnapKit'
   pod 'ReactiveCocoa'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 
 end

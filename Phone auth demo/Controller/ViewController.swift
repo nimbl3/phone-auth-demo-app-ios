@@ -11,6 +11,7 @@ import AccountKit
 import SnapKit
 import ReactiveSwift
 import ReactiveCocoa
+import FirebaseAuth
 
 enum AuthorizationStatus {
     case authorized(token: String)
@@ -114,7 +115,8 @@ class ViewController: UIViewController, AKFViewControllerDelegate {
     }
     
     private func presentFirebaseAuth() {
-        
+        let controller = FirebaseViewController()
+        present(controller, animated: true, completion: nil)
     }
     
     //MARK:- account kit handling
