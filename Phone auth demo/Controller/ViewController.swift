@@ -73,7 +73,6 @@ class ViewController: UIViewController, AKFViewControllerDelegate {
         loginButton.reactive.controlEvents(.touchUpInside)
             .take(during: reactive.lifetime)
             .observeValues { [unowned self] _ in
-                UIView.animate(withDuration: 0.3) {
                 switch self.status.value {
                 case .authorized:           self.logout()
                 case .unauthorized:         self.presentLogin()
