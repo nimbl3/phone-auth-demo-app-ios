@@ -19,8 +19,10 @@ extension UIColor {
     
     static let clouds = UIColor(236, 240, 241)
     static let midnightBlue = UIColor(44, 62, 80)
+    static let wetAsphalt = UIColor(52, 73, 94)
     
     static let peterRiver = UIColor(52, 152, 219)
     static let alizarin = UIColor(231, 76, 60)
+    static let carrot = UIColor(230, 126, 34)
     
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212D7EC82011BBBA00EFDB91 /* DemoUIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7EC72011BBBA00EFDB91 /* DemoUIManager.swift */; };
+		212D7ECA2011C28D00EFDB91 /* FirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D7EC92011C28D00EFDB91 /* FirebaseViewController.swift */; };
 		218CCFB720119606008E081E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CCFB620119606008E081E /* AppDelegate.swift */; };
 		218CCFB920119606008E081E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CCFB820119606008E081E /* ViewController.swift */; };
 		218CCFBC20119606008E081E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218CCFBA20119606008E081E /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		1CD977F0D6250D5B73B56AD0 /* Pods-Phone auth demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone auth demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Phone auth demo/Pods-Phone auth demo.debug.xcconfig"; sourceTree = "<group>"; };
+		212D7EC72011BBBA00EFDB91 /* DemoUIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUIManager.swift; sourceTree = "<group>"; };
+		212D7EC92011C28D00EFDB91 /* FirebaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewController.swift; sourceTree = "<group>"; };
 		218CCFB320119606008E081E /* Phone auth demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phone auth demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		218CCFB620119606008E081E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		218CCFB820119606008E081E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 				218CCFBD20119606008E081E /* Assets.xcassets */,
 				218CCFBF20119606008E081E /* LaunchScreen.storyboard */,
 				218CCFC220119606008E081E /* Info.plist */,
+				212D7EC72011BBBA00EFDB91 /* DemoUIManager.swift */,
 			);
 			path = "Phone auth demo";
 			sourceTree = "<group>";
@@ -83,6 +88,7 @@
 			children = (
 				218CCFC820119E24008E081E /* LoginViewController.swift */,
 				218CCFB820119606008E081E /* ViewController.swift */,
+				212D7EC92011C28D00EFDB91 /* FirebaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -251,9 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				212D7ECA2011C28D00EFDB91 /* FirebaseViewController.swift in Sources */,
 				218CCFC920119E24008E081E /* LoginViewController.swift in Sources */,
 				218CCFCD20119FC9008E081E /* Colors.swift in Sources */,
 				218CCFCF2011A46E008E081E /* Fonts.swift in Sources */,
+				212D7EC82011BBBA00EFDB91 /* DemoUIManager.swift in Sources */,
 				218CCFB920119606008E081E /* ViewController.swift in Sources */,
 				218CCFB720119606008E081E /* AppDelegate.swift in Sources */,
 			);

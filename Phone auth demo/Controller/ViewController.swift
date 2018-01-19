@@ -24,6 +24,7 @@ class ViewController: UIViewController, AKFViewControllerDelegate {
     private let stackView = UIStackView()
     private let statusLabel = UILabel()
     private let loginButton = UIButton()
+    private let firebaseButton = UIButton()
     
     private let status = MutableProperty<AuthorizationStatus>(.unauthorized)
     
@@ -48,6 +49,12 @@ class ViewController: UIViewController, AKFViewControllerDelegate {
         
         stackView.addArrangedSubview(loginButton)
         loginButton.snp.makeConstraints {
+            $0.width.equalTo(view).multipliedBy(0.6)
+            $0.height.equalTo(50.0)
+        }
+        
+        stackView.addArrangedSubview(firebaseButton)
+        firebaseButton.snp.makeConstraints {
             $0.width.equalTo(view).multipliedBy(0.6)
             $0.height.equalTo(50.0)
         }
@@ -93,9 +100,20 @@ class ViewController: UIViewController, AKFViewControllerDelegate {
             }
         }
         
+        firebaseButton.setTitle("Open Firebase auth", for: .normal)
+        firebaseButton.layer.cornerRadius = 6.0
+        firebaseButton.backgroundColor = .carrot
+        firebaseButton.titleLabel?.font = .avenirNext(.demiBold, size: 16.0)
+        firebaseButton.reactive.controlEvents(.touchUpInside)
+            .take(during: reactive.lifetime)
+            .observeValues { [unowned self] _ in self.presentFirebaseAuth() }
     }
 
     private func setupAccountKit() {
+        
+    }
+    
+    private func presentFirebaseAuth() {
         
     }
     
@@ -107,12 +125,11 @@ class ViewController: UIViewController, AKFViewControllerDelegate {
     
     private func presentLogin() {
         let viewController = accountKit.viewControllerForPhoneLogin()
+        viewController.delegate = self
         viewController.enableSendToFacebook = true
         viewController.enableGetACall = true
+        viewController.uiManager = DemoUIManager()
         
-        viewController.navigationItem.hidesBackButton = true
-        
-        viewController.delegate = self
         present(viewController, animated: true, completion: nil)
     }
         
