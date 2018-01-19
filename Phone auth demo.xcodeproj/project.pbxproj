@@ -12,6 +12,9 @@
 		218CCFBC20119606008E081E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218CCFBA20119606008E081E /* Main.storyboard */; };
 		218CCFBE20119606008E081E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218CCFBD20119606008E081E /* Assets.xcassets */; };
 		218CCFC120119606008E081E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218CCFBF20119606008E081E /* LaunchScreen.storyboard */; };
+		218CCFC920119E24008E081E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CCFC820119E24008E081E /* LoginViewController.swift */; };
+		218CCFCD20119FC9008E081E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CCFCC20119FC9008E081E /* Colors.swift */; };
+		218CCFCF2011A46E008E081E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CCFCE2011A46E008E081E /* Fonts.swift */; };
 		650BE7901FCE7D959162EC4D /* Pods_Phone_auth_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319002BCB940844681D403EE /* Pods_Phone_auth_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +27,9 @@
 		218CCFBD20119606008E081E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		218CCFC020119606008E081E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		218CCFC220119606008E081E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		218CCFC820119E24008E081E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		218CCFCC20119FC9008E081E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		218CCFCE2011A46E008E081E /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		319002BCB940844681D403EE /* Pods_Phone_auth_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phone_auth_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D45BE3EDDC9535BBD8251A /* Pods-Phone auth demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone auth demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Phone auth demo/Pods-Phone auth demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,14 +67,33 @@
 		218CCFB520119606008E081E /* Phone auth demo */ = {
 			isa = PBXGroup;
 			children = (
+				218CCFCB20119FC1008E081E /* Theme */,
+				218CCFCA20119FBD008E081E /* Controller */,
 				218CCFB620119606008E081E /* AppDelegate.swift */,
-				218CCFB820119606008E081E /* ViewController.swift */,
 				218CCFBA20119606008E081E /* Main.storyboard */,
 				218CCFBD20119606008E081E /* Assets.xcassets */,
 				218CCFBF20119606008E081E /* LaunchScreen.storyboard */,
 				218CCFC220119606008E081E /* Info.plist */,
 			);
 			path = "Phone auth demo";
+			sourceTree = "<group>";
+		};
+		218CCFCA20119FBD008E081E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				218CCFC820119E24008E081E /* LoginViewController.swift */,
+				218CCFB820119606008E081E /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		218CCFCB20119FC1008E081E /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				218CCFCC20119FC9008E081E /* Colors.swift */,
+				218CCFCE2011A46E008E081E /* Fonts.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		64A4EC90D4AEC7F77459B987 /* Pods */ = {
@@ -201,9 +226,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Phone auth demo/Pods-Phone auth demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -217,6 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				218CCFC920119E24008E081E /* LoginViewController.swift in Sources */,
+				218CCFCD20119FC9008E081E /* Colors.swift in Sources */,
+				218CCFCF2011A46E008E081E /* Fonts.swift in Sources */,
 				218CCFB920119606008E081E /* ViewController.swift in Sources */,
 				218CCFB720119606008E081E /* AppDelegate.swift in Sources */,
 			);
