@@ -12,7 +12,7 @@
 		212D7ECD2011C56A00EFDB91 /* masgo_user_profile.postman_collection.json in Resources */ = {isa = PBXBuildFile; fileRef = 212D7ECC2011C56A00EFDB91 /* masgo_user_profile.postman_collection.json */; };
 		212D7ECF2011C69900EFDB91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 212D7ECE2011C69900EFDB91 /* GoogleService-Info.plist */; };
 		218CCFB720119606008E081E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CCFB620119606008E081E /* AppDelegate.swift */; };
-		218CCFB920119606008E081E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CCFB820119606008E081E /* ViewController.swift */; };
+		218CCFB920119606008E081E /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CCFB820119606008E081E /* FacebookViewController.swift */; };
 		218CCFBC20119606008E081E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218CCFBA20119606008E081E /* Main.storyboard */; };
 		218CCFBE20119606008E081E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218CCFBD20119606008E081E /* Assets.xcassets */; };
 		218CCFC120119606008E081E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218CCFBF20119606008E081E /* LaunchScreen.storyboard */; };
@@ -30,7 +30,7 @@
 		212D7ECE2011C69900EFDB91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		218CCFB320119606008E081E /* Phone auth demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phone auth demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		218CCFB620119606008E081E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		218CCFB820119606008E081E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		218CCFB820119606008E081E /* FacebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
 		218CCFBB20119606008E081E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		218CCFBD20119606008E081E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		218CCFC020119606008E081E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		218CCFCA20119FBD008E081E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				218CCFB820119606008E081E /* ViewController.swift */,
+				218CCFB820119606008E081E /* FacebookViewController.swift */,
 				212D7EC92011C28D00EFDB91 /* FirebaseViewController.swift */,
 			);
 			path = Controller;
@@ -279,7 +279,7 @@
 				218CCFCD20119FC9008E081E /* Colors.swift in Sources */,
 				218CCFCF2011A46E008E081E /* Fonts.swift in Sources */,
 				212D7EC82011BBBA00EFDB91 /* DemoUIManager.swift in Sources */,
-				218CCFB920119606008E081E /* ViewController.swift in Sources */,
+				218CCFB920119606008E081E /* FacebookViewController.swift in Sources */,
 				218CCFB720119606008E081E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

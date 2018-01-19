@@ -18,7 +18,7 @@ enum AuthorizationStatus {
     case unauthorized
 }
 
-class ViewController: UIViewController, AKFViewControllerDelegate {
+class FacebookViewController: UIViewController, AKFViewControllerDelegate {
 
     private let accountKit = AKFAccountKit(responseType: .accessToken)
     

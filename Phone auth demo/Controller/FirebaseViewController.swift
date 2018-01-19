@@ -40,6 +40,8 @@ class FirebaseViewController: UIViewController, UITextFieldDelegate, AuthUIDeleg
         super.viewDidLoad()
         
         setupView()
+        setupBinding()
+        setupCurrentStatus()
     }
     
     //MARK:- private setup
@@ -72,13 +74,6 @@ class FirebaseViewController: UIViewController, UITextFieldDelegate, AuthUIDeleg
         statusLabel.textColor = .midnightBlue
         statusLabel.font = .avenirNext(.medium, size: 16.0)
         statusLabel.numberOfLines = 10
-        statusLabel.reactive.text <~ status.map {
-            switch $0 {
-            case .idle:                     return "Please fill in your mobile no. and wait for a SMS to confirm your OTP."
-            case .sent(let id):             return "We have sent you an OTP via SMS. Please check and fill in the code (verification id: \(id))"
-            case .confirmed(let user):      return "Welcome \(user.displayName ?? user.uid)! You're logged in!"
-            }
-        }
         
         textField.font = .avenirNext(.medium, size: 18.0)
         textField.keyboardType = .phonePad
@@ -93,6 +88,24 @@ class FirebaseViewController: UIViewController, UITextFieldDelegate, AuthUIDeleg
             $0.height.equalTo(50.0)
         }
         
+        loginButton.layer.cornerRadius = 6.0
+        loginButton.titleLabel?.font = .avenirNext(.demiBold, size: 16.0)
+        
+        closeButton.setTitle("Close", for: .normal)
+        closeButton.layer.cornerRadius = 6.0
+        closeButton.backgroundColor = .alizarin
+        closeButton.titleLabel?.font = .avenirNext(.demiBold, size: 16.0)
+    }
+    
+    private func setupBinding() {
+        statusLabel.reactive.text <~ status.map {
+            switch $0 {
+            case .idle:                     return "Please fill in your mobile no. and wait for a SMS to confirm your OTP."
+            case .sent(let id):             return "We have sent you an OTP via SMS. Please check and fill in the code (verification id: \(id))"
+            case .confirmed(let user):      return "Welcome \(user.displayName ?? user.uid)! You're logged in!"
+            }
+        }
+        
         textField.reactive.isHidden <~ status.map {
             switch $0 {
             case .confirmed:        return true
@@ -100,8 +113,6 @@ class FirebaseViewController: UIViewController, UITextFieldDelegate, AuthUIDeleg
             }
         }
         
-        loginButton.layer.cornerRadius = 6.0
-        loginButton.titleLabel?.font = .avenirNext(.demiBold, size: 16.0)
         loginButton.reactive.controlEvents(.touchUpInside)
             .take(during: reactive.lifetime)
             .observeValues { [unowned self] _ in
@@ -127,13 +138,17 @@ class FirebaseViewController: UIViewController, UITextFieldDelegate, AuthUIDeleg
             }
         }
         
-        closeButton.setTitle("Close", for: .normal)
-        closeButton.layer.cornerRadius = 6.0
-        closeButton.backgroundColor = .alizarin
-        closeButton.titleLabel?.font = .avenirNext(.demiBold, size: 16.0)
         closeButton.reactive.controlEvents(.touchUpInside)
             .take(during: reactive.lifetime)
             .observeValues { [unowned self] _ in self.dismiss(animated: true, completion: nil) }
+    }
+    
+    private func setupCurrentStatus() {
+        if let user = Auth.auth().currentUser {
+            status.value = .confirmed(user: user)
+        } else {
+            status.value = .idle
+        }
     }
     
     //MARK:- network handling
